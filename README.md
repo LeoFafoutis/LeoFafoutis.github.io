@@ -1,11 +1,13 @@
 # <p align="center"> LeoFafoutis </p>
+# Introduction
+  Explain OW and what current metric there are for rating players. Go into captainplanet and explain motivation
 # Data Collection
-  The
+  Explain the process of aquiring the data as a csv and what that is
 # Data Management
-  The
+  Then explain what we need from the data and how to clean it up so we do not have so much 
 # Data Analysis
-  The
+  Then go into your version of player impact rating
 # Hypothesis Testing
-  The
-# Insights
-  The
+  Then test your PIR to CP PIR in s2
+# Communication of Insights
+  Then state what you learned and what they learned
