@@ -1,10 +1,11 @@
-# LeoFafoutis.github.io
+# <p align="center"> LeoFafoutis </p>
 # Data Collection
-The
+  The
 # Data Management
-The
+  The
 # Data Analysis
-The
+  The
 # Hypothesis Testing
-The
+  The
 # Insights
+  The
