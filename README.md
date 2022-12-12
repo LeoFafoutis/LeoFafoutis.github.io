@@ -7,7 +7,7 @@
 ```
 import pandas as pd
 ```
-
+![This is an image](test_image.png)
 ## Data Collection
   Explain
 ## Data Management
