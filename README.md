@@ -1,8 +1,13 @@
-# Comparing players in the Overwatch League
+# Rating players in the Overwatch League
 ### LeoFafoutis
 
 ## Introduction
   Overwatch
+  
+```
+import pandas as pd
+```
+
 ## Data Collection
   Explain
 ## Data Management
