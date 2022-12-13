@@ -106,14 +106,14 @@ Before we get into the role specific breakdown of analyzing what stats are best 
 
 Starting with tanks, we can begin by plotting Eliminations vs Deaths. In most video games, this is a common way players view stats and is a good starting point for each of our roles. Using seaborn’s lmplot feature, we can plot the data fairly easily. For this graph, being near the bottom right would be the best scenario for a player (high eliminations, low deaths):
 
-(image of tank elims to deaths)
+![This is an image](Tank_Elim_vs_death.png)
 
 One player that stands out is Ameng (top left). This player has very high deaths and is involved in almost no eliminations. On the other end of the spectrum, Choihyobin has the highest eliminations while maintaining a relatively low death rate. There seems to be a slight correlation between lower deaths equaling higher eliminations, however this relationship is minimal. 
 Since K/D (elim to deaths) is a vague stats independent of role, lets begin to analyze role specific information we might need. When thinking of tanks in Overwatch (or any video game), being “tanky” is an important aspect. Being able to soak up damage so that your team can have more space is key. But how do you quantify a player’s ‘tankiness’?
 Let's look at a few statistics we have access to, mainly damage_taken and deaths. In theory, if we know the average health of a hero the person is playing and the total damage they take in 10 minutes, we could calculate how many times that amount of damage should have killed that player. We can call this value ‘expected deaths’ and calculate it by dividing the total damage taken by a player over the average health of the hero. We can then plot the expected deaths to the actual deaths:
 
 (image of expected deaths)
-(image of actual to expected deaths for tanks)
+![This is an image](Tank_ActualDeath_ExpectedDeath.png)
 
 At a glance, the meaning of a player's position on the graph can be a bit confusing. To simplify it, let's place four points on each corner of our chart, top left, top right, bottom left, and bottom right. Below is a key that gives a general idea of the meaning behind a players position:
 - Close to Top Left → Takes a lot of  Damage, Difficult to Eliminate
@@ -126,7 +126,7 @@ If we want to quantify this value as a number, we can create a new column in our
 
 One final metric tank players should look at is how well they can balance blocking damage for their team, while doing damage of their own. Let’s plot All Damage Done versus Damage Blocked to see where players land. In this graph, being near the bottom left is bad:
 
-(image of All damage done vs damage blocked for tanks)
+![This is an image](Tank_ADD_Blocked.png)
 
 Although we are still plotting individuals in the scatter plot, an interesting aggregation appears. There seems to be a diagonal line from Marve1 to Choihyobin that encloses the data points. This would suggest that a playstyle difference is at work, where certain players tend to focus on blocking damage while others focus more on damaging the opponents.  There is no great way to tell which is better, which means the most important data from the graph is in the lower end. Again we see Ameng near the bottom left as well as Elsa and Fury.
 Taking all these facts into consideration, lets begin to try to make our tank Player Impact Rating. To begin, we first need to normalize our data across all columns. Normalization is the process in which we can scale statistics to end up in the range of 0 and 1. (Read More on Normalization) This will allow us to compare statistics that have a larger set of values to ones with a smaller set of values. We can do this by taking advantage of the formula for normalization below: (GETIMAGE)
@@ -136,7 +136,7 @@ Once we have our new normalized values, we can begin selecting which values we w
 
 Now that we have our ratings, let's take a look at where each tank player lies. Using Pandas sort_values feature, we can organize the data in increasing order and graph it with seaborn’s barplot.
 
-(image of TANK PIR RANKING)
+![This is an image](Tank_PIR_ranks.png)
 
 Looking at these rankings, there seems to be a set of players with very similar PIR. For example, we see Gator, Rio, Tizi, Pokpo and Sade all with a rating of around 1.75. This occurs in other areas of the graph as well and suggests while those players may have a similar impact on the game, the way in which they accomplish that varies. Another interesting thing to note is who is sitting at the top and bottom of the rankings. We mentioned Ameng and Choi before and now see them again at the bottom and top of the list.
 	
