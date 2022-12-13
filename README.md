@@ -19,4 +19,4 @@ import pandas as pd
 ## Communication of Insights
   The
 
-This site was built using [Read More]([https://pages.github.com/](https://overwatchleague.com/en-us/news/23051823/introducing-player-impact-rating)/)
+This site was built using [Read More](https://pages.github.com/](https://overwatchleague.com/en-us/news/23051823/introducing-player-impact-rating)/)
