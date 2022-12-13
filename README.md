@@ -24,6 +24,16 @@ We will also learn how to view data from a CSV, extract the statistics we need, 
 To begin, we will be using Python along with pandas, numpy, matplotlib, seaborn, and more to handle the data. First, we need to import the correct libraries into our 
 file as shown below.
   
+```
+import pandas as pd
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+```
 
 
 
