@@ -1,5 +1,5 @@
 # Leo Fafoutis
-##Contents
+## Contents
 ### Fitness UI Project
 ### Data Science Pipeline Project
 
