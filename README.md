@@ -1,5 +1,7 @@
-# Rating players in the Overwatch League
-### LeoFafoutis
+# Leo Fafoutis
+##Contents
+### Fitness UI Project
+### Data Science Pipeline Project
 
 
 
