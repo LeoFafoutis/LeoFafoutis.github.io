@@ -1,4 +1,0 @@
-Team Members - (115745919) (leofaf) Leo Fafoutis
-App Description - A CMSC study group or project group finder/creator.
-API links - https://beta.umd.io/
-YouTube Demo Video - Link to a YouTube video that provides a demo of your application.
