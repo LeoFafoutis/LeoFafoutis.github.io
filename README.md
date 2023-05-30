@@ -1,7 +1,6 @@
 # Leo Fafoutis
 
 ## Website (https://leofafoutis.github.io/)
-### Contents
 #### Data Science Personal Project (article1.html)
 #### Data Science Pipeline Project (/DataSci-ML)
 #### Machine Learning In Music (/DataSci-ML)
