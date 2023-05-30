@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="images/image.png" alt="Logo" class="navbar-logo">
+        <div class="navbar-options">
+            <a href="index.html">Home</a>
+            <a href="article1.html">Tracer Article</a>
+            <a href="code.html">Tracer Code</a>
+            <a href="p1code.html">Data Science in Esports</a>
+            <a href="p2code.html">Machine Learning in Music</a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="main-section">
+        <h1>Tracer</h1>
+        <article>
+            <p>Taking a look at <a href="https://youtu.be/xlX3yre8aIo"> PlatChat's Overwatch Tracer Tier list </a>, we
+                want to see what stats correlate to the assigned rank. The entire code can be viewed <a
+                    href="code.html">here</a> under the code tab. I want to preface this by saying stats in Overwatch
+                are very flimsy. This is a fun project and the results are not meant to be taken too seriously when
+                looking at players. Please keep this in mind when reading the results. </p>
+
+            <br><br>
+            <h1>PlatChat Tier List</h1>
+            <div class="img-cont"><img src="images/tracer_ranks.png"></div>
+
+            <h1>Impact Rating</h1>
+            <p>
+                We begin by ranking the players based solely on their stats and how they compare to others within the
+                list. Removing stats such as 'time discorded' or 'time hacked' to make sure the stats we use are only
+                based on the players' performance and not outside factors. This will leave us with 29 various stats as
+                shown below:
+
+                <br><br>
+                ['All Damage Done', 'Assists', 'Average Time Alive', 'Critical Hit Kills - Avg per 10 Min', 'Damage -
+                Pulse Bomb', 'Damage - Quick Melee', 'Damage - Weapon', 'Damage Taken', 'Deaths', 'Defense Contest Time
+                - Avg per 10 Min', 'Eliminations', 'Final Blows', 'Hero Damage Done', 'Melee Final Blows', 'Multikills',
+                'Obj Contest Time - Avg per 10 Min', 'Objective Kills', 'Objective Time', 'Offense Contest Time - Avg
+                per 10 Min', 'Pulse Bomb Attach Rate', 'Pulse Bomb Efficiency', 'Pulse Bomb Kills', 'Pulse Bomb Recalls
+                - Avg per 10 Min', 'Self Healing Percent of Damage Taken', 'Solo Kills', 'Time Building Ultimate', 'Time
+                Elapsed per Ultimate Earned', 'Time Holding Ultimate', 'Time Played']
+
+                <br><br>
+                We convert the values so all stats are in the scale of 'per 10 min'. We also normalize the data so all
+                values are between 0 and 1, then add each normalized value to create an 'impact rating'. In theory if a
+                player is at the top of each stat, they would score a perfect 29. We can then rank the players and
+                display them in the following graph:
+            </p>
+
+            <div class="img-cont"><img src="images/rank_PIR_tracer.png"></div>
+            <br><br>
+            <p>
+                The rankings are fairly similar to PlatChat's with a few changes, such as ranking Speedily and
+                Choisehwan in the middle. However this method uses many statistics that may or may not be important. It
+                also assumes each statistic has the same level of importance, which also may not be true. What we can do
+                instead is look at the PlatChat rankings and see which statistics correlate to high ranks. Using
+                spearman's rank correlation coefficient and converting our S, A, B, C, D tiers to 5, 4, 3, 2, 1 values
+                respectively, we see:</p>
+
+            <h1>Correlation Ratings</h1>
+            <div class="img-cont"><img src="images/Correlation.png"></div>
+            <br><br>
+            <p>
+                Our top 5 stats that correlate to high ranks are Final Blows, Critical Hit Kills, Average Time
+                Alive, Eliminations, and Pulse Bomb Kills. The higher each of these values are, the more likely that
+                player will be a high rank. Time Elapsed per Ultimate Earned is also important, but will decrease the
+                higher a player is rated.
+
+                <br><br>
+
+                Interestingly enough, finals blows having the highest correlation to rank might be a result of the way
+                we view the Overwatch League. Since the killfeed is the main way viewers can gather information about
+                what is happening, it would only make sense we rank players higher based on how often we see them in the
+                killfeed. However, it may also be that final blows are simply a result of being a better tracer and
+                makes them appear in the killfeed more.
+
+                <br><br>
+
+                In the end, Overwatch is a very nuanced game and we can only assume so much about the stats involved. I
+                appreciate you taking the time to read through this article and hope to include more soon.
+
+            </p>
+        </article>
+    </div>
+</body>
+
+</html>
