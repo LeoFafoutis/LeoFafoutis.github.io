@@ -1,5 +1,4 @@
 # Leo Fafoutis
-## Contents
 
 ## Website (https://leofafoutis.github.io/)
 ### Contents
