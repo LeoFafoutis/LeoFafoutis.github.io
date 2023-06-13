@@ -39,6 +39,10 @@ body {
     font-size: 20px;
 }
 
+.navbar-options a:hover {
+    color: darkorange;
+}
+
 .navbar-options a.active {
     color: darkorange;
     position: relative;
@@ -147,6 +151,10 @@ p {
     font-weight: bold;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+.circle-button:hover {
+    background-color: #b6b6b6;
 }
 
 .blue-button {
